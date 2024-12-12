@@ -1,3 +1,4 @@
+import Banner from "../Banner/Banner";
 
 
 const Home = () => {
@@ -5,7 +6,7 @@ const Home = () => {
 
         <div>
             
-             <h1 className="text-orange-400">This is home</h1>
+             <Banner></Banner>
         </div>
     );
 };
