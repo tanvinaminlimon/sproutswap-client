@@ -2,8 +2,8 @@ import React from 'react'
 
 const NavBar = () => {
     const navOptions = <>
-      <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+      <li><a>Home</a></li>
+        <li><a>Admin</a></li>
     
     </>
   return (
