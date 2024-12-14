@@ -4,9 +4,10 @@ import { Carousel } from 'react-responsive-carousel';
 import img1 from "../../../assets/BannerImages/image_1.jpg";
 import img2 from "../../../assets/BannerImages/image_2.jpg";
 import img3 from "../../../assets/BannerImages/image_3.jpg";
-import img4 from "../../../assets/BannerImages/image_4.jpg";
+
 import img5 from "../../../assets/BannerImages/image_5.jpg";
-import img6 from "../../../assets/BannerImages/image_6.jpg";
+import img6 from "../../../assets/logo/logo_1.png"
+import img7 from "../../../assets/logo/logo_2.png"
 
 const Banner = () => {
     
@@ -27,6 +28,14 @@ const Banner = () => {
                 
                 <div>
                     <img  src={img5} />
+             
+                </div>
+                <div>
+                    <img  src={img6} />
+             
+                </div>
+                <div>
+                    <img  src={img7} />
              
                 </div>
                 

@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 const  GiftZone = () => {
@@ -25,15 +26,19 @@ const  GiftZone = () => {
         <h5 className="text-orange-500">OUR GIFT SHOP</h5>
       <h1 className="text-orange-500 text-4xl uppercase">Thoughtful Gifts for plant lovers</h1>
       </div>
+      
       <div className="grid grid-cols-3 space-x-10 space-y-10">
         {giftImage.map((plant) => (
             <div key={plant.id} >
+                <Link to={`/details/${plant.id}`}>
                 <img
-                className=" w-[500px] h-[500px]"
+                className=" w-[500px] h-[500px] cursor-pointer"
               src={plant.image}
               alt={plant.name}
               
             />
+                </Link>
+               
              <div className="my-7">
              <h2 className="text-center">{plant.name}</h2>
              <h5 className="text-center text-orange-400">{plant.price} Tk</h5>

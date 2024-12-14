@@ -4,6 +4,8 @@ import {
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Dashboard from "../Dashboard/Dashboard";
+import Details from "../pages/Details/Details";
+import SimpleLayout from "../pages/SimpleLayout/SimpleLayout";
 
 
   export const router = createBrowserRouter([
@@ -17,16 +19,25 @@ import Dashboard from "../Dashboard/Dashboard";
             element: <Home></Home>,
             
         },
-        {
-          path: '/dashboard',
-          element: <Dashboard></Dashboard>,
+        // {
+        //   path: '/dashboard',
+        //   element: <Dashboard></Dashboard>,
+        // }
+      ],
 
-          // children: [
-          //   {
-          //     path: '/dashboard',
-          //     element: <VendorDashboard></VendorDashboard>,
-          //   },
-          // ],
+    },
+
+    {
+      path: "/",
+      element: <SimpleLayout></SimpleLayout>, // Simple layout without NavBar and Footer
+      children: [
+        {
+          path: "/dashboard",
+          element: <Dashboard></Dashboard>, // Dashboard page
+        },
+        {
+          path: "/details/:id",
+          element: <Details></Details>, // Details page
         },
       ],
     },

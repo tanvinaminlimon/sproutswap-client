@@ -5,9 +5,8 @@ import UpdateInventory from "../VendorManagement/UpdateInventory";
 
 function Dashboard() {
   return (
-    <div className='max-w-screen-xl h-[700px] m-auto'>
-        
-       <h1>Dashboard</h1>
+    <div className='max-w-screen-xl m-auto'>
+
        <AddProduct></AddProduct>
        <UpdateInventory></UpdateInventory>
        <SalesReports></SalesReports>

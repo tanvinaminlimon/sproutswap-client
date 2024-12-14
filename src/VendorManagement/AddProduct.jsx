@@ -1,6 +1,6 @@
 const AddProduct = () => {
     return (
-      <div className="p-4 my-60">
+      <div className="p-4">
         <h2 className="text-2xl font-bold mb-4">Add Product</h2>
         <form className="space-y-4">
           <div>
