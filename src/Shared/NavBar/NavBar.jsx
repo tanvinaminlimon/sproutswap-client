@@ -1,8 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import logo from "../../assets/logo/logo_1.png"
 
 const NavBar = () => {
     const navOptions = <>
-      <li><a>Home</a></li>
+      <li><Link to={`/`}>Home</Link></li>
+      <li><Link to={`/dashboard`}>Dashboard</Link></li>
+      
         <li><a>Admin</a></li>
     
     </>
@@ -32,7 +36,11 @@ const NavBar = () => {
         
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">sproutswap</a>
+    
+    <div className='flex items-center space-x-2'>
+      <img className='w-[100px]' src={logo} alt="" />
+      <h3 className="text-xl font-bold text-sky-800">SproutSwap</h3>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -41,7 +49,7 @@ const NavBar = () => {
   </div>
   <div className="navbar-end">
   <div className="avatar">
-  <div className="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+  <div className="ring-primary ring-offset-base-100 w-16 rounded-full ring ring-offset-2">
     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
   </div>
 </div>

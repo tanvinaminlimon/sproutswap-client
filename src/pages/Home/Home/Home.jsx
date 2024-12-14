@@ -1,3 +1,4 @@
+import GiftZone from "../../GiftZone/GiftZone";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             
              <Banner></Banner>
+             <GiftZone></GiftZone>
              <Category></Category>
         </div>
     );

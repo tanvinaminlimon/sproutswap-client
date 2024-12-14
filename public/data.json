@@ -1,0 +1,87 @@
+
+[
+    {
+        "id": 1,
+        "name": "Astrophytum Cactus",
+        "image": "https://i.ibb.co.com/s1ZxLBp/astrophytum-cactus.jpg",
+        "description": "A unique cactus with star-like patterns on its body.",
+        "price": 500
+    },
+    {
+        "id": 2,
+        "name": "Haworthia Cooperi",
+        "image": "https://i.ibb.co.com/smj0jR8/haworthia-cooperi.jpg",
+        "description": "A small succulent with translucent green leaves.",
+        "price": 450
+    },
+    {
+        "id": 3,
+        "name": "Miniature Sansevieria",
+        "image": "https://i.ibb.co.com/qJRk7TX/miniature-sansevieria.jpg",
+        "description": "A compact snake plant perfect for small spaces.",
+        "price": 1000
+    },
+    {
+        "id": 4,
+        "name": "Moon Cactus",
+        "image": "https://i.ibb.co.com/9vFsFLK/Moon-cactus.jpg",
+        "description": "A colorful grafted cactus with a bright top.",
+        "price": 899
+    },
+    {
+        "id": 5,
+        "name": "Purple Haze Succulent",
+        "image": "https://i.ibb.co.com/PNnjCPw/purple-Haze-succulent.jpg",
+        "description": "A purple-toned succulent with a unique shape.",
+        "price": 450
+    },
+    {
+        "id": 6,
+        "name": "Sansevieria",
+        "image": "https://i.ibb.co.com/L8HLBkV/sansevieria.jpg",
+        "description": "A classic snake plant, perfect for indoor air purification.",
+        "price": 799
+    },
+    {
+        "id": 7,
+        "name": "Sensevieria",
+        "image": "https://i.ibb.co.com/w6LLxrj/sensevieria-02.jpg",
+        "description": "A second variant of the popular snake plant.",
+        "price": 789
+    },
+    {
+        "id": 8,
+        "name": "Sensevieria Boncel Mini Variegated",
+        "image": "https://i.ibb.co.com/wWrQ13d/sensevieria-Boncel-Mini-Variegated.jpg",
+        "description": "A variegated mini snake plant with unique coloring.",
+        "price": 690
+    },
+    {
+        "id": 9,
+        "name": "Sensevieria Cordova Variegated",
+        "image": "https://i.ibb.co.com/sywfhT1/sensevieria-cordova-Variegated.jpg",
+        "description": "A cordova variegated snake plant with striking stripes.",
+        "price": 900
+    },
+    {
+        "id": 10,
+        "name": "Sensevieria Noahs",
+        "image": "https://i.ibb.co.com/2KDqvZB/sensevieria-noahs.jpg",
+        "description": "A distinct variety of snake plant known for its resilience.",
+        "price": 1999
+    },
+    {
+        "id": 11,
+        "name": "Terrarium Fitunia",
+        "image": "https://i.ibb.co.com/mDdnsxw/terrarium-fitunia.jpg",
+        "description": "A terrarium plant with vibrant, colorful leaves.",
+        "price": 2099
+    },
+    {
+        "id": 12,
+        "name": "Terrarium Haworthia Succulent",
+        "image": "https://i.ibb.co.com/C1MN8kd/terrarium-haworthia-succulent.jpg",
+        "description": "A terrarium containing a Haworthia succulent, perfect for decoration.",
+        "price": 2299
+    }
+]
