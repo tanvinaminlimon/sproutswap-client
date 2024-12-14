@@ -1,15 +1,13 @@
-import AddProduct from "../VendorManagement/AddProduct";
-import SalesReports from "../VendorManagement/SalesReports";
-import UpdateInventory from "../VendorManagement/UpdateInventory";
+import { NavLink, Outlet } from "react-router-dom";
+import DashboardNavbar from "../pages/DashboardNavbar/DashboardNavbar";
 
 
 function Dashboard() {
   return (
     <div className='max-w-screen-xl m-auto'>
-
-       <AddProduct></AddProduct>
-       <UpdateInventory></UpdateInventory>
-       <SalesReports></SalesReports>
+         <DashboardNavbar></DashboardNavbar>
+          
+         <Outlet></Outlet>
 
     </div>
   )

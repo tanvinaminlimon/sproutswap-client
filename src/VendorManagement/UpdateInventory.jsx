@@ -1,33 +1,40 @@
 const UpdateInventory = () => {
-    return (
-      <div className="p-4">
-        <h2 className="text-2xl font-bold mb-4">Update Inventory</h2>
-        <form className="space-y-4">
+  return (
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+      <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 className="text-3xl font-bold mb-6 text-center text-white">Update Inventory</h2>
+        <form className="space-y-6">
+          {/* Product ID Input */}
           <div>
-            <label className="block mb-2 font-medium">Product ID</label>
+            <label className="block mb-2 text-white font-medium">Product ID</label>
             <input
               type="text"
-              className="w-full border border-gray-300 rounded-lg p-2"
+              className="w-full border border-gray-600 rounded-lg p-3 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Enter product ID"
             />
           </div>
+
+          {/* New Quantity Input */}
           <div>
-            <label className="block mb-2 font-medium">New Quantity</label>
+            <label className="block mb-2 text-white font-medium">New Quantity</label>
             <input
               type="number"
-              className="w-full border border-gray-300 rounded-lg p-2"
+              className="w-full border border-gray-600 rounded-lg p-3 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Enter new quantity"
             />
           </div>
+
+          {/* Submit Button */}
           <button
             type="submit"
-            className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+            className="w-full bg-green-500 text-white px-4 py-3 rounded-lg font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
           >
             Update Inventory
           </button>
         </form>
       </div>
-    );
-  };
-  
-  export default UpdateInventory;
+    </div>
+  );
+};
+
+export default UpdateInventory;
