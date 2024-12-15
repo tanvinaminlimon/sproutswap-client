@@ -3,16 +3,16 @@ import React from "react";
 const SalesReports = () => {
   // Sample sales data for 10 products
   const salesData = [
-    { product: "Product A", quantity: 50, revenue: 500 },
-    { product: "Product B", quantity: 30, revenue: 300 },
-    { product: "Product C", quantity: 70, revenue: 700 },
-    { product: "Product D", quantity: 40, revenue: 400 },
-    { product: "Product E", quantity: 20, revenue: 200 },
-    { product: "Product F", quantity: 60, revenue: 600 },
-    { product: "Product G", quantity: 35, revenue: 350 },
-    { product: "Product H", quantity: 80, revenue: 800 },
-    { product: "Product I", quantity: 25, revenue: 250 },
-    { product: "Product J", quantity: 90, revenue: 900 },
+    { product: "Product A", quantity: 50, revenue: 5000 },
+    { product: "Product B", quantity: 30, revenue: 3009 },
+    { product: "Product C", quantity: 70, revenue: 70087 },
+    { product: "Product D", quantity: 40, revenue: 40066 },
+    { product: "Product E", quantity: 20, revenue: 20077 },
+    { product: "Product F", quantity: 60, revenue: 60767},
+    { product: "Product G", quantity: 35, revenue: 36750 },
+    { product: "Product H", quantity: 80, revenue: 86600 },
+    { product: "Product I", quantity: 25, revenue: 26750 },
+    { product: "Product J", quantity: 90, revenue: 90770 },
   ];
 
   return (
@@ -35,7 +35,7 @@ const SalesReports = () => {
               >
                 <td className="px-6 py-3 border border-gray-700">{item.product}</td>
                 <td className="px-6 py-3 border border-gray-700">{item.quantity}</td>
-                <td className="px-6 py-3 border border-gray-700">${item.revenue}</td>
+                <td className="px-6 py-3 border border-gray-700">{item.revenue}tk</td>
               </tr>
             ))}
           </tbody>
