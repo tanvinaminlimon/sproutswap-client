@@ -16,22 +16,22 @@ const SalesReports = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
+    <div className="min-h-screen bg-[#B6C99B] text-white p-6">
+      <div className="bg-[#B6C99B] p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold mb-6 text-center">Sales Reports</h2>
         <table className="table-auto w-full text-left border-collapse">
           <thead>
-            <tr className="bg-blue-600 text-white">
-              <th className="px-6 py-3 border border-blue-700">Product</th>
-              <th className="px-6 py-3 border border-blue-700">Quantity Sold</th>
-              <th className="px-6 py-3 border border-blue-700">Total Revenue</th>
+            <tr className="bg-[#728156] text-white">
+              <th className="px-6 py-3 border border-[#728156]">Product</th>
+              <th className="px-6 py-3 border border-[#728156]">Quantity Sold</th>
+              <th className="px-6 py-3 border border-[#728156]">Total Revenue</th>
             </tr>
           </thead>
           <tbody>
             {salesData.map((item, index) => (
               <tr
                 key={index}
-                className={index % 2 === 0 ? "bg-gray-700" : "bg-gray-800"}
+                className={index % 2 === 0 ? "bg-[#CFE1B9]" : "bg-[#88976C]"}
               >
                 <td className="px-6 py-3 border border-gray-700">{item.product}</td>
                 <td className="px-6 py-3 border border-gray-700">{item.quantity}</td>

@@ -51,7 +51,7 @@ const Details = () => {
           <img
             src={gift.image}// Replace with actual image path
             alt="Plant Subscription"
-            className="w-full rounded-lg"
+            className="w-full h-[500px] rounded-lg"
           />
         </div>
 
@@ -61,7 +61,7 @@ const Details = () => {
           <h2 className="text-3xl font-semibold text-gray-800">
             {gift.name}
           </h2>
-          <p className="text-xl text-orange-500 mt-2">{gift.price} Tk</p>
+          <p className="text-xl text-[#88976c] mt-2">{gift.price} Tk</p>
           <p className="text-gray-500 mt-1">Delivery every 3 months</p>
 
           {/* Plan Options */}
@@ -74,7 +74,7 @@ const Details = () => {
                     key={plan}
                     className={`px-4 py-2 rounded-md border ${
                       selectedPlan === plan
-                        ? "bg-orange-500 text-white"
+                        ? "bg-[#728156] text-white"
                         : "bg-gray-100 text-gray-600"
                     }`}
                     onClick={() => setSelectedPlan(plan)}
@@ -95,7 +95,7 @@ const Details = () => {
                   key={color}
                   className={`px-4 py-2 rounded-md border ${
                     selectedColor === color
-                      ? "bg-orange-500 text-white"
+                      ? "bg-[#728156] text-white"
                       : "bg-gray-100 text-gray-600"
                   }`}
                   onClick={() => setSelectedColor(color)}
@@ -133,7 +133,7 @@ const Details = () => {
 
           {/* Add to Cart Button */}
           <button
-            className="w-full mt-6 bg-orange-500 text-white py-3 rounded-md text-lg font-semibold"
+            className="w-full mt-6 bg-[#728156] text-white py-3 rounded-md text-lg font-semibold"
             onClick={handleAddToCart}
           >
             Add to Cart
@@ -165,7 +165,7 @@ const Details = () => {
           a lot of care. All packages are sent through USPS or UPS.
         </p>
         <p className="text-gray-600 mt-4">
-          Please check our <a href="#" className="text-orange-500 underline">FAQs</a> for more details on shipping.
+          Please check our <a href="#" className="text-[#728156]underline">FAQs</a> for more details on shipping.
         </p>
       </div>
     </div>

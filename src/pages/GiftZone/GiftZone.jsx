@@ -23,16 +23,16 @@ const  GiftZone = () => {
     <div>
 
       <div className="text-center my-20">
-        <h5 className="text-orange-500">OUR GIFT SHOP</h5>
-      <h1 className="text-orange-500 text-4xl uppercase">Thoughtful Gifts for plant lovers</h1>
+        <h5 className="text-[#728156]">OUR GIFT SHOP</h5>
+      <h1 className="text-[#728156] text-4xl font-[Montserrat] uppercase">Thoughtful Gifts for plant lovers</h1>
       </div>
       
-      <div className="grid grid-cols-3 space-x-10 space-y-10">
+      <div className="grid grid-cols-4 space-x-10 space-y-10">
         {giftImage.map((plant) => (
             <div key={plant.id} >
                 <Link to={`/details/${plant.id}`}>
                 <img
-                className=" w-[500px] h-[500px] cursor-pointer"
+                className=" w-[300px] h-[300px] cursor-pointer transform transition-transform duration-300 hover:scale-105"
               src={plant.image}
               alt={plant.name}
               
@@ -40,8 +40,8 @@ const  GiftZone = () => {
                 </Link>
                
              <div className="my-7">
-             <h2 className="text-center">{plant.name}</h2>
-             <h5 className="text-center text-orange-400">{plant.price} Tk</h5>
+             <h2 className="text-center font-[Montserrat]">{plant.name}</h2>
+             <h5 className="text-center text-[#728156]">{plant.price} Tk</h5>
              </div>
             </div>
          
