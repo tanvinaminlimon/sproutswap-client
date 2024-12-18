@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Search</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>My Plant Store</h1>
+        <button id="searchButton" class="search-button">Search</button>
+    </header>
+
+    <!-- Search Bar (Hidden by Default) -->
+    <div class="search-container" id="searchContainer">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search for your plant..." 
+            autocomplete="off"
+        />
+        <button id="searchSubmit">Search</button>
+        <p id="searchResult" class="search-result"></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Plant Store</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+</html>

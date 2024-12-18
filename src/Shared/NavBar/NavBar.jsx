@@ -4,10 +4,10 @@ import logo from "../../assets/logo/logo_1.png"
 
 const NavBar = () => {
     const navOptions = <>
-      <li><Link to={`/`}>Home</Link></li>
-      <li><Link to={`/dashboard`}>Dashboard</Link></li>
+      <li><Link className='text-white font-bold text-[15px] ' to={`/`}>Home</Link></li>
+      <li><Link className='text-white font-bold text-[15px] ' to={`/dashboard`}>Dashboard</Link></li>
+      <li><Link className='text-white font-bold text-[15px] ' to={`/products`}>Products</Link></li>
       
-        <li><a>Admin</a></li>
     
     </>
   return (
@@ -48,11 +48,32 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="avatar">
-  <div className="ring-primary ring-offset-base-100 w-11 rounded-full ring ring-offset-2">
-    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-  </div>
-</div>
+    <div className='mr-5'>
+      <Link to="/login"><button className='bg-orange-300 p-4 rounded mr-4'>Login</button></Link>
+      <Link to="/signup"><button className='bg-blue-200 p-4 rounded'>Sign Up</button></Link>
+    </div>
+  
+  <div className="dropdown dropdown-end">
+      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        </div>
+      </div>
+      <ul
+        tabIndex={0}
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+        <li>
+          <a className="justify-between">
+            Profile
+            <span className="badge">New</span>
+          </a>
+        </li>
+        <li><a>Settings</a></li>
+        <li><a>Logout</a></li>
+      </ul>
+    </div>
   </div>
 </div>
     </div>

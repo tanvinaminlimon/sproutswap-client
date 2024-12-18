@@ -1,0 +1,266 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F4;
+    color: #123;
+}
+
+/* Section Styling */
+.section {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.section:hover {
+    background-color: #f2f2f2;
+}
+
+/* Arrow Icon Styling */
+.icon {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.section.open .icon {
+    transform: rotate(180deg);
+}
+
+/* Collapsible Content Styling */
+.content {
+    display: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #555;
+    background-color: #fff;
+}
+
+/* Subscription Section */
+.subscription {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #B85C4B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #a14639;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white ;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#e38a44;
+}
+
+.logo:hover {
+    color: #68764f; /* Optional: Add a hover effect */
+}
+
+
+
+nav a,
+.header-right a {
+    margin: 0 1rem;
+    color: #a66647;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+}
+
+nav a:hover,
+.header-right a:hover {
+    color: #e38a44;
+}
+
+/* Plant Subscription Section - Compact Version */
+.plant-section {
+    display: flex;
+    background-color: #F9F9F4;
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 10px; /* Less bottom margin */
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center; /* Align image and text vertically */
+}
+
+.plant-image img {
+    width: 200px; /* Smaller image width */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.plant-details {
+    margin-left: 15px; /* Less space between image and text */
+    flex: 1;
+}
+
+.plant-details h2 {
+    font-size: 20px; /* Smaller heading size */
+    color: #123;
+    margin-bottom: 5px; /* Less space under heading */
+}
+
+.price {
+    font-size: 16px; /* Smaller price text */
+    color: #555;
+    font-weight: bold;
+    margin: 5px 0; /* Compact margin */
+}
+
+.plant-details p {
+    font-size: 14px; /* Smaller paragraph text */
+    color: #555;
+    margin-bottom: 10px; /* Compact spacing */
+    line-height: 1.4; /* Tighter line spacing */
+}
+
+.option-btn {
+    background-color: #e0e0e0;
+    color: #555;
+    border: none;
+    padding: 6px 12px; /* Smaller buttons */
+    margin-right: 5px; /* Less spacing between buttons */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px; /* Smaller font size */
+}
+
+.subscribe-btn {
+    background-color: #B85C4B;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Smaller subscribe button */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px; /* Adjust button text size */
+    margin-top: 5px;
+}
+
+.subscribe-btn:hover {
+    background-color: #a14639;
+}
+
+footer {
+    background-color: #CFE1B9;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer h3 {
+    color: #a0522d;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  footer ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  footer ul li a:hover {
+    color: #a0522d;
+  }
+  
+  footer p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  footer form input[type="email"] {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  footer form button {
+    padding: 10px 20px;
+    background-color: #a0522d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  footer form button:hover {
+    background-color: #8b4513;
+  }
+  
+  footer .social-icons a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  footer .social-icons a:hover {
+    color: #a0522d;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .cart-icon {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }

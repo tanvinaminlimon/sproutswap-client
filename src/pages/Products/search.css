@@ -1,0 +1,111 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Full-width seamless search container */
+.search-container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width */
+    background-color: #f9f9f9; /* Slightly off-white for a clean look */
+    padding: 15px 20px; /* Adjust padding for a clean layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Minimal input style: Remove borders and background */
+.search-container input {
+    width: 90%; /* Input field stretches almost full width */
+    padding: 10px 0; /* Add vertical padding */
+    font-size: 1.2rem;
+    color: #333; /* Dark gray text */
+    border: none; /* Remove border */
+    outline: none; /* Remove focus outline */
+    background: transparent; /* Transparent background */
+    border-bottom: 2px solid #ddd; /* Add subtle bottom border */
+    transition: border-color 0.3s ease;
+}
+
+/* Bottom border changes color when focused */
+.search-container input:focus {
+    border-bottom: 2px solid #007bff; /* Highlight color */
+}
+
+/* Minimal button style */
+.search-container button {
+    background-color: transparent; /* Transparent background */
+    color: #007bff; /* Blue color for the text */
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.search-container button:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Main Section */
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+main h2 {
+    margin-bottom: 10px;
+}
+
+main ul {
+    list-style: none;
+    line-height: 2;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Sections</title>
+    <link rel="stylesheet" href="plantsub.css"> <!-- Linking CSS file -->
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">SPROUTSWAP🌱<span class="leaf">🪴</span></a>
+        <div class="header-right">
+            <a href="plantsub.html">PLANT SUBSCRIPTION</a>
+            <a href="account.html">ACCOUNT</a>
+            <a href="#">SEARCH</a>
+            <a href="#">CART (0)</a>
+        </div>
+    </header>
+    <div class="plant-section">
+        <div class="plant-image">
+            <img src="House Plant Subscription Boxes.jpeg" alt="Plant Subscription Box">
+        </div>
+        <div class="plant-details">
+            <h2>Plant Subscription Box</h2>
+            <p class="price">Price: 600 TK</p>
+            <p>
+                Experience the thrill of unboxing unique, exquisite plants monthly with our Plant Subscription Box. 
+                We deliver hand-picked, unusual plant species each month, each housed in a design-led planter, directly to your door. 
+                Embrace the elegance and tranquillity of nature — because your living space deserves it.
+            </p>
+            <button class="subscribe-btn">600 TK/month - Subscribe Now</button>
+        </div>
+    </div>
+    <!-- Collapsible Sections -->
+    <div class="section" onclick="toggleSection(this)">
+        <span>Description</span>
+        <span class="icon">^</span>
+    </div>
+    <div class="content">Experience the thrill of unboxing unique, exquisite plants monthly with our Plant Subscription Box. We deliver hand-picked, unusual plant species each month, each housed in a design-led planter, directly to your door. Embrace the elegance and tranquillity of nature - because your living space deserves a touch of greenery as unique as you are</div>
+
+    <div class="section" onclick="toggleSection(this)">
+        <span>Key Features</span>
+        <span class="icon">^</span>
+    </div>
+    <div class="content">Each box contains a unique, rare, or exotic plant species, adding an exciting element to your indoor garden. Our team of experienced botanists ensures that each plant and planter pairing is perfect, saving you the research and guesswork.Our plants come paired with high-quality, trendy planters that are functional and enhance your interior décor. These planters are pieces of art in their own right. These are curated to perfectly complement each plant and elevate the aesthetics of your space.</div>
+
+    <div class="section" onclick="toggleSection(this)">
+        <span>How It Works</span>
+        <span class="icon">^</span>
+    </div>
+    <div class="content">Plant varieties & planters change every month, but styles & designs are cohesive one month to the next! You'll also receive a surprise product gift in each box from select brands in the health & wellbeing space. Your box will arrive on or around the 15th of every month. If you bought your subscription after the 15th, your first box will arrive within 3-5 working days and subsequent boxes will arrive on the 15th. </div>
+
+    <div class="section" onclick="toggleSection(this)">
+        <span>More Details</span>
+        <span class="icon">^</span>
+    </div>
+    <div class="content">Each box comes with detailed care instructions to help you provide the best environment for your new plant. With our subscription, you become part of our plant-loving community. You'll gain access to exclusive content, tips, and our team of experts who are always ready to assist with any plant care queries.We source only the healthiest plants from our trusted growers and the finest planters to ensure you receive a premium product every time. We are committed to eco-friendly practices, sourcing plants responsibly and using sustainable materials in our packaging and planters.
+    </div>
+
+    <div class="section" onclick="toggleSection(this)">
+        <span>Delivery & Guarantee</span>
+        <span class="icon">^</span>
+    </div>
+    <div class="content">
+        - Subscriptions are sent out on/ around the 15th of the month on a Next Day Delivery service (DPD - tracked).
+        Recipients email address and schedule the digital gift to send on a date of your choosing. </div>
+
+    <!-- Subscription Section -->
+    <div class="subscription">
+        Love a surprise? Join our monthly subscription!
+    </div>
+
+    <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <!-- Help Section -->
+      <div>
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">Contact Us & FAQs</a></li>
+          <li><a href="#">Shipping and Returns</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+
+      <!-- More Section -->
+      <div>
+        <h3>More</h3>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Climate Commitment</a></li>
+        </ul>
+      </div>
+
+      <!-- Subscription Section -->
+      <div>
+        <h3>Let's Be Friends!</h3>
+        <p>Subscribe to receive fun updates. No spam ever.</p>
+        <form>
+          <input type="email" placeholder="Enter your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Good Vibes Section -->
+      <div>
+        <h3>Good Vibes</h3>
+        <p>We started this company to share our love for plants with our friends, and we would love to have you in our circle. By sharing this contagiously good lifestyle with you, we hope you will do the same for others.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © SproutSwap 
+    </div>
+  </footer>
+
+
+
+    <!-- Linking JS file -->
+    <script src="plantsub.js"></script>
+</body>
+</html>

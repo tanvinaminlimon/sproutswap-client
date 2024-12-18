@@ -115,6 +115,11 @@ import {
   import AddProduct from "../VendorManagement/AddProduct";
   import UpdateInventory from "../VendorManagement/UpdateInventory";
   import SalesReports from "../VendorManagement/SalesReports";
+import Products from "../pages/Products/Products";
+import ProductsLayout from "../pages/Products/ProductsLayout";
+import Shop from "../pages/Products/Shop";
+import Login from "../Authentication/Login";
+
   
   export const router = createBrowserRouter([
     {
@@ -125,6 +130,17 @@ import {
           path: "/",
           element: <Home></Home>,
         },
+      ],
+    },
+    {
+      path: "/products",
+      element: <ProductsLayout></ProductsLayout>,
+      children: [
+        {
+          index: true, // Default route for /products
+          element: <Products></Products>,
+        },
+        
       ],
     },
     {
@@ -157,6 +173,18 @@ import {
           path: "/details/:id",
           element: <Details></Details>,
         },
+        {
+            path:"/shop",
+            element: <Shop></Shop>,
+        },
+        {
+          path:'/login',
+          element: <Login></Login>
+        },
+        // {
+        //   path:'/signup',
+        //   element:  <SignUp></SignUp>,
+        // },
       ],
     },
   ]);

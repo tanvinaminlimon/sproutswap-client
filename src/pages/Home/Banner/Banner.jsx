@@ -12,7 +12,14 @@ import img7 from "../../../assets/logo/logo_2.png"
 const Banner = () => {
     
   return (
-    <Carousel>
+    <Carousel
+    autoPlay            // Enables automatic slide
+    infiniteLoop        // Allows carousel to loop continuously
+    interval={3000}     // Sets slide interval to 3000ms (3 seconds)
+    showThumbs={false}  // Hides thumbnail navigation
+    showStatus={false}  // Hides status (e.g., "1/6")
+    stopOnHover={false}
+    >
                 <div>
                     <img  src={img1} />
                    
