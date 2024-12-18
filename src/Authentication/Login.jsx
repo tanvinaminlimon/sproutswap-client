@@ -2,10 +2,40 @@ import React from 'react'
 import '../Authentication/login.css'
 import app from '../firebase/firebase.init'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useAuth } from '../AuthProvider/AuthProvider';
+import {  Link, useNavigate } from 'react-router-dom';
 
 function Login() {
+    const {userInfo, setUserInfo } = useAuth();
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
+    const navigate = useNavigate()
+
+    const handleGoogleLogin = () =>{
+        console.log("goole click")
+        signInWithPopup(auth, provider)
+        .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    // const credential = GoogleAuthProvider.credentialFromResult(result);
+    // const token = credential.accessToken;
+   
+    const user = result.user;
+
+    // console.log('credential',credential);
+    // console.log('token',token);
+    
+    setUserInfo(user)
+    navigate('/');
+
+    console.log(userInfo)
+  
+  }).catch((error) => {
+   
+    const errorMessage = error.message;
+    console.log("error message",errorMessage)
+   
+  });
+    }
     
   return (
     <div className='login-section'>
@@ -31,11 +61,12 @@ function Login() {
                 <h5 className='mt-2 mb-2'>OR Login Using Google</h5>
                 <div className='login-btn text-center'>
                    
-                    <button ><i class="fa-brands fa-google"></i></button>
+                    <button onClick={handleGoogleLogin }><i class="fa-brands fa-google"></i></button>
                 </div>
                 <a href="#" className="forgot">Forgot Username/Password?</a>
                 <div className="create">
-                    <a href="#">Create Your Account</a>
+                    <Link to="/signup">Create Your Account</Link>
+                
                     <i className="ri-arrow-right-fill"></i>
                 </div>
             </div>

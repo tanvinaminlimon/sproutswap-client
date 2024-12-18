@@ -119,6 +119,7 @@ import Products from "../pages/Products/Products";
 import ProductsLayout from "../pages/Products/ProductsLayout";
 import Shop from "../pages/Products/Shop";
 import Login from "../Authentication/Login";
+import Signup from "../Authentication/Signup";
 
   
   export const router = createBrowserRouter([
@@ -181,10 +182,10 @@ import Login from "../Authentication/Login";
           path:'/login',
           element: <Login></Login>
         },
-        // {
-        //   path:'/signup',
-        //   element:  <SignUp></SignUp>,
-        // },
+        {
+          path:'/signup',
+          element: <Signup></Signup>,
+        },
       ],
     },
   ]);

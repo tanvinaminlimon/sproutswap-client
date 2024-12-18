@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo/logo_1.png"
+import { useAuth } from '../../AuthProvider/AuthProvider';
+import { getAuth, signOut } from 'firebase/auth';
 
 const NavBar = () => {
     const navOptions = <>
@@ -10,6 +12,25 @@ const NavBar = () => {
       
     
     </>
+    const {userInfo,setUserInfo} = useAuth();
+    const auth = getAuth();
+    
+     if (userInfo) {
+      console.log("navbar", userInfo.photoURL);
+     }
+    
+
+    const handleLogOut = () =>{
+
+      signOut(auth).then(() => {
+        // Sign-out successful.
+        console.log("sign out successfully")
+        setUserInfo(null);
+      }).catch((error) => {
+        // An error happened.
+        console.log("error signout");
+      });
+    }
   return (
     <div>
         <div className="navbar fixed z-20 max-w-screen-xl   bg-[#98a77c]">
@@ -48,17 +69,13 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <div className='mr-5'>
-      <Link to="/login"><button className='bg-orange-300 p-4 rounded mr-4'>Login</button></Link>
-      <Link to="/signup"><button className='bg-blue-200 p-4 rounded'>Sign Up</button></Link>
-    </div>
-  
-  <div className="dropdown dropdown-end">
+    {
+      userInfo ? <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            
+            src={`${userInfo.photoURL}`} alt={`${userInfo.displayName}`} referrerPolicy="no-referrer"  />
         </div>
       </div>
       <ul
@@ -66,14 +83,24 @@ const NavBar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <li>
           <a className="justify-between">
-            Profile
+            {userInfo.displayName}
             <span className="badge">New</span>
           </a>
         </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li> <Link to="/dashboard">Dashboard</Link></li>
+        <li onClick={handleLogOut}><a>Logout</a></li>
       </ul>
-    </div>
+    </div> :
+
+<div className='mr-5'>
+<Link to="/login"><button className='bg-orange-300 p-4 rounded mr-4'>Login</button></Link>
+<Link to="/signup"><button className='bg-blue-200 p-4 rounded'>Sign Up</button></Link>
+</div>
+
+    }
+    
+  
+  
   </div>
 </div>
     </div>
