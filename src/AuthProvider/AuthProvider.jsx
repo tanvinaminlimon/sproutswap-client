@@ -6,9 +6,10 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [userInfo, setUserInfo] = useState(null);
+    const auth = getAuth(); // Initialize Firebase Auth
      // Initialize user info
      useEffect(() => {
-        const auth = getAuth(); // Initialize Firebase Auth
+       
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // Update userInfo with Google user data

@@ -5,30 +5,30 @@ import { useAuth } from '../../AuthProvider/AuthProvider';
 import { getAuth, signOut } from 'firebase/auth';
 
 const NavBar = () => {
+  const {userInfo,setUserInfo} = useAuth();
+  const auth = getAuth();
+
     const navOptions = <>
       <li><Link className='text-white font-bold text-[15px] ' to={`/`}>Home</Link></li>
-      <li><Link className='text-white font-bold text-[15px] ' to={`/dashboard`}>Dashboard</Link></li>
+    
+      {
+        userInfo &&   <li><Link className='text-white font-bold text-[15px] ' to={`/dashboard`}>Dashboard</Link></li>
+      }
       <li><Link className='text-white font-bold text-[15px] ' to={`/products`}>Products</Link></li>
       
     
     </>
-    const {userInfo,setUserInfo} = useAuth();
-    const auth = getAuth();
-    
-     if (userInfo) {
-      console.log("navbar", userInfo.photoURL);
-     }
-    
-
+   
+  
     const handleLogOut = () =>{
 
       signOut(auth).then(() => {
         // Sign-out successful.
-        console.log("sign out successfully")
+      
         setUserInfo(null);
       }).catch((error) => {
         // An error happened.
-        console.log("error signout");
+     
       });
     }
   return (
