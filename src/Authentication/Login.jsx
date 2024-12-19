@@ -111,7 +111,7 @@ function Login() {
                     <i className="ri-arrow-right-fill"></i>
                 </div>
             </form>
-            <div className='text-center absolute bottom-[230px] right-[420px]'>
+            <div className='text-center absolute bottom-[230px] right-[570px]'>
                    
                     <button onClick={handleGoogleLogin }><i class="fa-brands fa-google"></i></button>
                 </div>
