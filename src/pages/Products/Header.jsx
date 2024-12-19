@@ -7,8 +7,7 @@ const Header = () => (
     <div className="logo">SPROUTSWAP🌱<span className="leaf">🪴</span></div>
     <div className="header-right">
       <Link to="/plantsub">PLANT SUBSCRIPTION</Link>
-      <Link to="/account">ACCOUNT</Link>
-      <Link to="/search">SEARCH</Link>
+      
       <Link to="/cart">CART (0)</Link>
     </div>
   </header>

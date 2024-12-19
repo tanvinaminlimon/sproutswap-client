@@ -120,6 +120,11 @@ import ProductsLayout from "../pages/Products/ProductsLayout";
 import Shop from "../pages/Products/Shop";
 import Login from "../Authentication/Login";
 import Signup from "../Authentication/Signup";
+import PlantSub from "../pages/Products/PlantSub";
+import Cart from "../pages/Products/Cart";
+
+
+
 
   
   export const router = createBrowserRouter([
@@ -141,6 +146,7 @@ import Signup from "../Authentication/Signup";
           index: true, // Default route for /products
           element: <Products></Products>,
         },
+        
         
       ],
     },
@@ -186,6 +192,14 @@ import Signup from "../Authentication/Signup";
           path:'/signup',
           element: <Signup></Signup>,
         },
+        {
+          path:"/plantsub",
+          element:<PlantSub></PlantSub>
+        },
+        {
+          path:'/cart',
+          element: <Cart></Cart>
+        }
       ],
     },
   ]);

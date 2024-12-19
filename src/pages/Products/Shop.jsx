@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Products/styles.css'
 import GiftZone from '../GiftZone/GiftZone';
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
   return (
@@ -11,10 +12,10 @@ const Shop = () => {
           SPROUTSWAP🌱<span className="leaf">🪴</span>
         </a>
         <div className="header-right">
-          <a href="#">PLANT SUBSCRIPTION</a>
-          <a href="#">ACCOUNT</a>
-          <a href="#">SEARCH</a>
-          <a href="#">CART (0)</a>
+          <Link to="/">Home</Link>
+          <Link to="/plantsub">Plant Subscription</Link>
+          <Link to="/cart">Cart</Link>
+          
         </div>
       </header>
 
