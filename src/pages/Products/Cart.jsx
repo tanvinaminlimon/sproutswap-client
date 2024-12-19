@@ -39,6 +39,12 @@ const Cart = () => {
     },
   ]);
 
+  const [orderDetails, setOrderDetails] = useState({
+    fullName: "",
+    shippingAddress: "",
+    paymentMethod: "",
+  });
+
   const updateQuantity = (id, quantity) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -52,6 +58,15 @@ const Cart = () => {
   };
 
   const getSubtotal = (price, quantity) => price * quantity;
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setOrderDetails((prevDetails) => ({ ...prevDetails, [name]: value }));
+  };
+
+  const handlePlaceOrder = () => {
+    alert(`Order placed successfully!\nName: ${orderDetails.fullName}\nAddress: ${orderDetails.shippingAddress}\nPayment Method: ${orderDetails.paymentMethod}`);
+  };
 
   return (
     <div className="p-8">
@@ -106,6 +121,58 @@ const Cart = () => {
           ))}
         </tbody>
       </table>
+
+      <div className="mt-8 p-6 border rounded bg-gray-50">
+        <h2 className="text-xl font-bold mb-4">Checkout</h2>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <div className="mb-4">
+            <label className="block mb-2 font-bold">Full Name:</label>
+            <input
+              type="text"
+              name="fullName"
+              value={orderDetails.fullName}
+              onChange={handleInputChange}
+              placeholder="Enter your full name"
+              className="w-full border p-2 rounded"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block mb-2 font-bold">Shipping Address:</label>
+            <input
+              type="text"
+              name="shippingAddress"
+              value={orderDetails.shippingAddress}
+              onChange={handleInputChange}
+              placeholder="Enter your shipping address"
+              className="w-full border p-2 rounded"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block mb-2 font-bold">Payment Method:</label>
+            <select
+              name="paymentMethod"
+              value={orderDetails.paymentMethod}
+              onChange={handleInputChange}
+              className="w-full border p-2 rounded"
+              required
+            >
+              <option value="">Select Payment Method</option>
+              <option value="Credit Card">Credit Card</option>
+              <option value="Debit Card">Debit Card</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            onClick={handlePlaceOrder}
+            className="w-full bg-[#728156] text-white p-3 rounded hover:bg-[#b6c99b]"
+          >
+            Place Order
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
