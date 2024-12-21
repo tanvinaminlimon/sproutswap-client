@@ -122,6 +122,7 @@ import Login from "../Authentication/Login";
 import Signup from "../Authentication/Signup";
 import PlantSub from "../pages/Products/PlantSub";
 import Cart from "../pages/Products/Cart";
+import OrderTrack from "../pages/OderTrack/OrderTrack";
 
 
 
@@ -199,7 +200,11 @@ import Cart from "../pages/Products/Cart";
         {
           path:'/cart',
           element: <Cart></Cart>
-        }
+        },
+        {
+          path:'/ordertrack',
+          element: <OrderTrack></OrderTrack>
+        },
       ],
     },
   ]);

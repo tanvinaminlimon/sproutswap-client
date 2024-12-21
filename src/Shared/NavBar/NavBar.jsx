@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo/logo_1.png"
 import { useAuth } from '../../AuthProvider/AuthProvider';
 import { getAuth, signOut } from 'firebase/auth';
+import TopBanner from '../../pages/TopBanner/TopBanner';
 
 const NavBar = () => {
+  const [isBannerVisible, setIsBannerVisible] = useState(true);
   const {userInfo,setUserInfo} = useAuth();
   const auth = getAuth();
 
@@ -33,7 +35,10 @@ const NavBar = () => {
     }
   return (
     <div>
-        <div className="navbar fixed z-20 max-w-screen-xl   bg-[#98a77c]">
+      {isBannerVisible && <TopBanner onClose={() => setIsBannerVisible(false)} />}
+        <div className={`navbar fixed z-20 max-w-screen-xl bg-[#98a77c] ${
+          isBannerVisible ? "mt-[0px]" : "mt-0"
+        }`}>
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -69,6 +74,7 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
+     { userInfo &&  <Link to='/ordertrack'><button className='bg-blue-200 p-4 rounded mr-4'>Order Track</button></Link>}
     {
       userInfo ? <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -93,6 +99,7 @@ const NavBar = () => {
     </div> :
 
 <div className='mr-5'>
+
 <Link to="/login"><button className='bg-orange-300 p-4 rounded mr-4'>Login</button></Link>
 <Link to="/signup"><button className='bg-blue-200 p-4 rounded'>Sign Up</button></Link>
 </div>
@@ -108,3 +115,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
