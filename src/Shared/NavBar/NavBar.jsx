@@ -16,7 +16,8 @@ const NavBar = () => {
       {
         userInfo &&   <li><Link className='text-white font-bold text-[15px] ' to={`/dashboard`}>Dashboard</Link></li>
       }
-      <li><Link className='text-white font-bold text-[15px] ' to={`/products`}>Products</Link></li>
+      <li><Link className='text-white font-bold text-[15px] ' to={`/products`}>Subscription</Link></li>
+      <li><Link className='text-white font-bold text-[15px] ' to={`/gallery`}>Gallery</Link></li>
       
     
     </>

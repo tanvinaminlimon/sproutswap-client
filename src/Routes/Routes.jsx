@@ -123,6 +123,7 @@ import Signup from "../Authentication/Signup";
 import PlantSub from "../pages/Products/PlantSub";
 import Cart from "../pages/Products/Cart";
 import OrderTrack from "../pages/OderTrack/OrderTrack";
+import Gallery from "../pages/Gallery/Gallery";
 
 
 
@@ -136,6 +137,10 @@ import OrderTrack from "../pages/OderTrack/OrderTrack";
         {
           path: "/",
           element: <Home></Home>,
+        },
+        {
+          path: "/gallery",
+          element: <Gallery></Gallery>,
         },
       ],
     },
