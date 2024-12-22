@@ -3,7 +3,7 @@ import '../Products/styles.css';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => (
-  <section className="hero">
+  <section className="hero flex">
     <div className="text-content">
       <h1>WE CONNECT PEOPLE WITH PLANTS THAT ARE PERFECT FOR THEM!</h1>
       <p className="quote">

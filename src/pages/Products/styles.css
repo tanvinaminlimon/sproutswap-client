@@ -67,7 +67,7 @@ nav a:hover,
 
 .text-content h1 {
     font-size: 3rem;
-    color: rgb(8, 88, 8);
+    color: #728156;
     margin-bottom: 0.5rem;
     line-height: 1.2;
 }
@@ -179,7 +179,7 @@ nav a:hover,
 /* General Section Styling */
 .shop-section {
     background-color: #CFE1B9; /* Blue background */
-    color: #136328;;
+    color: #728156;;
     text-align: center;
     padding: 2rem 1rem;
     font-family: Arial, sans-serif;

@@ -12,7 +12,7 @@ const SubscriptionCards = () => {
         "No replacement warranty",
       ],
       isPopular: false,
-      bgColor: "bg-blue-500",
+      bgColor: "bg-[#728165]",
     },
     {
       title: "Standard",
@@ -36,7 +36,7 @@ const SubscriptionCards = () => {
         "Unlimited replacements",
       ],
       isPopular: false,
-      bgColor: "bg-red-500",
+      bgColor: "bg-[#728156]",
     },
   ];
 
@@ -65,7 +65,7 @@ const SubscriptionCards = () => {
                     }`}
                   >
                     {feature.includes("No") ? (
-                      <span className="text-red-500 font-bold">✘</span>
+                      <span className="text-[#728156] font-bold">✘</span>
                     ) : (
                       <span className="text-green-500 font-bold">✔</span>
                     )}
@@ -81,7 +81,7 @@ const SubscriptionCards = () => {
                     ? "bg-blue-500 text-white"
                     : plan.bgColor === "bg-gray-700"
                     ? "bg-gray-700 text-white"
-                    : "bg-red-500 text-white"
+                    : "bg-[#728156] text-white"
                 } hover:opacity-90`}
               >
                 Select
