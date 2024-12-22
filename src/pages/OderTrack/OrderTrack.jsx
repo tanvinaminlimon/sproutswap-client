@@ -30,7 +30,7 @@ const OrderTrack = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-200"
+            className="w-full bg-[#728156] text-white py-2 rounded-md hover:bg-green-600 transition duration-200"
           >
             SUBMIT
           </button>
@@ -39,21 +39,21 @@ const OrderTrack = () => {
 
       <div className="flex flex-col md:flex-row justify-around items-center w-full bg-white shadow-lg mt-10 p-6">
         <div className="flex flex-col items-center">
-          <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mb-2">
+          <div className="w-10 h-10 bg-[#728156] rounded-full flex items-center justify-center mb-2">
             <span className="text-white font-bold">💳</span>
           </div>
           <h3 className="font-bold text-sm">SECURE PAYMENT</h3>
           <p className="text-xs text-gray-500">100% secure payment</p>
         </div>
         <div className="flex flex-col items-center">
-          <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mb-2">
+          <div className="w-10 h-10 bg-[#728156] rounded-full flex items-center justify-center mb-2">
             <span className="text-white font-bold">🚚</span>
           </div>
           <h3 className="font-bold text-sm">FREE SHIPPING</h3>
           <p className="text-xs text-gray-500">For Orders Above Tk. 3000</p>
         </div>
         <div className="flex flex-col items-center">
-          <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mb-2">
+          <div className="w-10 h-10 bg-[#728156] rounded-full flex items-center justify-center mb-2">
             <span className="text-white font-bold">🌱</span>
           </div>
           <h3 className="font-bold text-sm">ONLINE NURSERY</h3>
