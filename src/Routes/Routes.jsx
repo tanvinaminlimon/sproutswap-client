@@ -124,6 +124,7 @@ import PlantSub from "../pages/Products/PlantSub";
 import Cart from "../pages/Products/Cart";
 import OrderTrack from "../pages/OderTrack/OrderTrack";
 import Gallery from "../pages/Gallery/Gallery";
+import PlantCommunity from "../pages/PlantCommunity/PlantCommunity";
 
 
 
@@ -142,6 +143,10 @@ import Gallery from "../pages/Gallery/Gallery";
           path: "/gallery",
           element: <Gallery></Gallery>,
         },
+        {
+          path:'/community',
+          element: <PlantCommunity/>
+        }
       ],
     },
     {

@@ -2,7 +2,7 @@ import { createContext, useState, useContext,useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
-const AuthContext = createContext();
+export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
     const [userInfo, setUserInfo] = useState(null);
@@ -23,9 +23,14 @@ export const AuthProvider = ({ children }) => {
         return () => unsubscribe();
     }, []);
 
+    const authInfo = {
+        userInfo,
+        setUserInfo
+    }
+
 
     return (
-        <AuthContext.Provider value={{ userInfo, setUserInfo }}>
+        <AuthContext.Provider value={authInfo}>
             {children}
         </AuthContext.Provider>
     );

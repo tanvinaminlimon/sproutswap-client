@@ -1,26 +1,55 @@
-import React, { useState } from 'react'
+import  { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo/logo_1.png"
-import { useAuth } from '../../AuthProvider/AuthProvider';
+import { AuthContext} from '../../AuthProvider/AuthProvider';
 import { getAuth, signOut } from 'firebase/auth';
 import TopBanner from '../../pages/TopBanner/TopBanner';
 
 const NavBar = () => {
   const [isBannerVisible, setIsBannerVisible] = useState(true);
-  const {userInfo,setUserInfo} = useAuth();
+  const {userInfo,setUserInfo} = useContext(AuthContext)
   const auth = getAuth();
 
-    const navOptions = <>
-      <li><Link className='text-white font-bold text-[15px] ' to={`/`}>Home</Link></li>
-    
-      {
-        userInfo &&   <li><Link className='text-white font-bold text-[15px] ' to={`/dashboard`}>Dashboard</Link></li>
-      }
-      <li><Link className='text-white font-bold text-[15px] ' to={`/products`}>Subscription</Link></li>
-      <li><Link className='text-white font-bold text-[15px] ' to={`/gallery`}>Gallery</Link></li>
-      
-    
-    </>
+    const navOptions = (
+      <>
+        <li>
+          <Link className="text-white font-bold text-[15px] " to={`/`}>
+            Home
+          </Link>
+        </li>
+
+        {userInfo && (
+          <li>
+            <Link
+              className="text-white font-bold text-[15px] "
+              to={`/dashboard`}
+            >
+              Dashboard
+            </Link>
+          </li>
+        )}
+        <li>
+          <Link className="text-white font-bold text-[15px] " to={`/products`}>
+            Subscription
+          </Link>
+        </li>
+        <li>
+          <Link className="text-white font-bold text-[15px] " to={`/gallery`}>
+            Gallery
+          </Link>
+        </li>
+        {userInfo && (
+          <li>
+            <Link
+              className="text-white font-bold text-[15px] "
+              to={`/community`}
+            >
+              Plant Community
+            </Link>
+          </li>
+        )}
+      </>
+    );
    
   
     const handleLogOut = () =>{
