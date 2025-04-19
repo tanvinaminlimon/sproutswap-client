@@ -24,7 +24,7 @@ const  GiftZone = () => {
 
       <div className="text-center my-20">
         <h5 className="text-[#728156]">OUR GIFT SHOP</h5>
-      <h1 className="text-[#728156] text-4xl font-[Montserrat] uppercase">Thoughtful Gifts for plant lovers</h1>
+      <h1 className="text-[#728156] text-4xl font-[Montserrat] uppercase">--Thoughtful Gifts for plant lovers-- </h1>
       </div>
       
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 ">
