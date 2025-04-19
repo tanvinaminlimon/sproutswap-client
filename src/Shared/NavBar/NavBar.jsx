@@ -1,5 +1,5 @@
 import  { useContext, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../assets/logo/logo_1.png"
 import { AuthContext} from '../../AuthProvider/AuthProvider';
 import { getAuth, signOut } from 'firebase/auth';
@@ -9,6 +9,8 @@ const NavBar = () => {
   const [isBannerVisible, setIsBannerVisible] = useState(true);
   const {userInfo,setUserInfo} = useContext(AuthContext)
   const auth = getAuth();
+
+  const navigate = useNavigate();
 
     const navOptions = (
       <>
@@ -58,6 +60,7 @@ const NavBar = () => {
         // Sign-out successful.
       
         setUserInfo(null);
+        navigate('/')
       }).catch((error) => {
         // An error happened.
      
